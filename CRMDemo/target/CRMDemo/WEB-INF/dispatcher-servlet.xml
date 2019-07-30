@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- 指定扫描路径，在该包路径中的注解能够被 Spring 扫描到，从而实现对应功能 -->
+    <context:component-scan base-package="com.shixun.spring.controller" />
+
+    <!-- 指定视图解析的一些内容 -->
+    <bean
+            class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 将默认的视图文件存放路径定义在 WEB-INF/views/ 这里了 -->
+        <property name="prefix" value="WEB-INF/views/" />
+        <!-- 将默认的视图文件定义成了 .jsp -->
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <!-- 构建一个默认的 Serlvet 来额外的处理一切静态资源 -->
+    <mvc:annotation-driven />
+    <mvc:default-servlet-handler />
+
+</beans>

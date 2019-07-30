@@ -1,0 +1,87 @@
+html {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background: url(../images/bg.jpg);
+	background-size: cover;
+	text-align: center;
+}
+
+.register-container {
+	margin: 0 auto;
+	width: 800px;
+	height: 630px;
+	border: solid 1px #aaa;
+	border-radius: 15px;
+	background: #f9f9f9;
+	filter: alpha(Opacity = 80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+}
+
+.register-container h1 {
+	font-size: 25px;
+	font-weight: 700;
+	height: 60px;
+	line-height: 60px;
+	background: url(../images/logo.png) no-repeat 250px;
+	background-size: 60px;
+}
+
+.register-control button {
+	width: 80px;
+	height: 25px;
+	margin: 15px;
+}
+
+.clr {
+	clear: both;
+}
+
+form {
+	width: 100%;
+}
+
+.input-group, .input-group .select {
+	width: 100%;
+	margin-top: 25px;
+}
+
+.input-group .input-label {
+	text-align: right;
+}
+
+.input-group .input, .input-group .select {
+	width: 50%;
+	height: 30px;
+	font-size: 14px;
+}
+
+.input-group .radio-label {
+	width: 230px;
+	float: left;
+	text-align: right;
+}
+
+.input-group  .radio-group {
+	float: left;
+	text-align: left;
+}
+
+.input-group  .radio-group label {
+	margin-right: 20px;
+}
+
+.input-group .multiple-select {
+	width: 50%;
+	height: 80px;
+	padding: 0 10px;
+	font-size: 14px;
+}
+
+footer {
+	margin-top: 30px;
+}
